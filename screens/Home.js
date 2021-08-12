@@ -39,7 +39,7 @@ const Home = ({ navigation }) => {
                 onPress={() => console.log('Profile')}
             >
                 <Image
-                    source={images.profile_photo}
+                    source={images.profile_photo_real}
                     style={{
                         width: 40,
                         height: 40,
@@ -183,7 +183,9 @@ const Home = ({ navigation }) => {
                                         </Text>
 
                                         <Profiles
-                                            profiles={item.stillWatching}
+                                            profiles={item.stillWatching.slice(
+                                                1
+                                            )}
                                         />
                                     </View>
                                 )}
